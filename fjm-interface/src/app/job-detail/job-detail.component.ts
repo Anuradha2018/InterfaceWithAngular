@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { JobRecord } from './../models/jobRecord';
+import { HttpClient } from '@angular/common/http';
+import { JobListService } from './../job-list.service';
 
 @Component({
   selector: 'app-job-detail',
