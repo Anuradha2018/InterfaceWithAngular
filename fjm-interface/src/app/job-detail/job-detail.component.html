@@ -1,3 +1,27 @@
-<p>
-  job-detail works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Details of each Job</title>
+</head>
+<body>
+    <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto">
+        <div class="row" style="margin: auto">  
+            <div class="card border-dark mb-3" style="max-width: 180rem;max-height:30rem; margin-right: auto;margin-top:30px;margin-left:auto">
+              <div class="card-header"><h6 class="card-title">NAME:{{jobs.name}}</h6></div>
+                <div class="card-body" style="font-size: 12px">
+                  <p class="card-text"><strong>Job ID:</strong> {{jobs.ID}}</p>
+                  <p class="card-text"><strong>Job URI:</strong> {{jobs.URI}}</p>
+                  <p class="card-text"><strong>Job State:</strong> {{jobs.state}}</p>
+                  <p class="card-text"><strong>Sumbitted At:</strong> {{jobs.timestamps.submitted | date}}</p>
+                  <p class="card-text"><strong>Started At:</strong> {{jobs.timestamps.started | date}}</p>
+                  <p class="card-text"><strong>Ended At:</strong> {{jobs.timestamps.ended | date}}</p>
+                  <p class="card-text"><strong>Last Modified At:</strong> {{jobs.timestamps.lastModified | date}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+</body>
+</html>

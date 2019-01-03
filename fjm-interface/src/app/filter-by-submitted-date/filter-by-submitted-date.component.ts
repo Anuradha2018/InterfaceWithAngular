@@ -9,6 +9,7 @@ import { JobListService } from './../job-list.service';
   styleUrls: ['./filter-by-submitted-date.component.css']
 })
 export class FilterBySubmittedDateComponent implements OnInit {
+  jobs: any = [];
   columnDefs = [
     {headerName: 'Name', field: 'name' },
     { headerName: 'State', field: 'state'},
@@ -17,10 +18,17 @@ export class FilterBySubmittedDateComponent implements OnInit {
 ];
 rowData: any;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private jobListService: JobListService) { }
 
   ngOnInit() {
     this.rowData = this.httpClient.get('http://localhost:5000/v0/jobs?limit=50&offset=0');
+    this.getData();
+  }
+  getData() {
+    this.jobListService.getjobs().subscribe((data: {}) =>{
+      this.jobs = data;
+      console.log(data);
+    })
   }
 
 }

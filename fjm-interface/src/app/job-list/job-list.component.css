@@ -1,6 +1,8 @@
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-     
-  }
+ .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

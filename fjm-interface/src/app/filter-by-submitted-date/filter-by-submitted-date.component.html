@@ -7,15 +7,16 @@
   <title>Filtered Jobs</title>
 </head>
 <body>
-    
+    <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto">
+  
       <ag-grid-angular 
-      style="width: 820px; height: 170px;" 
+      style="width: 810px; height: 170px; margin:auto;" 
       class="ag-theme-balham"
       [enableSorting]="true"
       [enableFilter]="true"
       [rowData]="rowData | async" 
       [columnDefs]="columnDefs">
     </ag-grid-angular>
-  
+  </div>
 </body>
 </html>

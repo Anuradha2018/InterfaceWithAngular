@@ -4,25 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>List Of Jobs</title>
 </head>
 <body>
     <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto">
-      <app-filter-by-submitted-date></app-filter-by-submitted-date>
-      <div class="row" style="margin: auto;" >  
-        <div *ngFor="let job of (jobs | sortBySubmittedDate)" class="card border-dark mb-3" style="max-width: 180rem;max-height:30rem; margin-right: auto;margin-top:30px;margin-left: 9auto">
-          <div class="card-header"><h6 class="card-title">NAME: {{job.name}}</h6></div>
-            <div class="card-body" style="font-size: 12px">
-              <p class="card-text"><strong>Job ID:</strong> {{job.ID}}</p>
-              <p class="card-text"><strong>Job URI:</strong> {{job.URI}}</p>
-              <p class="card-text"><strong>Job State:</strong> {{job.state}}</p>
-              <p class="card-text"><strong>Sumbitted At:</strong> {{job.timestamps.submitted | date}}</p>
-              <p class="card-text"><strong>Started At:</strong> {{job.timestamps.started | date}}</p>
-              <p class="card-text"><strong>Ended At:</strong> {{job.timestamps.ended | date}}</p>
-              <p class="card-text"><strong>Last Modified At:</strong> {{job.timestamps.lastModified | date}}</p>
-            </div>
-          </div>
-        </div>
+      <div class="container">
+          <button *ngFor="let job of jobs"  (click)="onSelect(job)" type="button" class="btn btn-primary" routerLink="'jobdetail/{{job.ID}}">{{job.name}}</button>
       </div>
+    </div>
 </body>
 </html>
