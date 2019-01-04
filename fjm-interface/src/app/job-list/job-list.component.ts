@@ -2,9 +2,6 @@ import { JobListService } from './../job-list.service';
 import { Component, OnInit } from '@angular/core';
 import { JobRecord } from './../models/jobRecord';;
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-job-list',
@@ -18,8 +15,7 @@ export class JobListComponent implements OnInit {
   constructor(private jobListService: JobListService,
     private router: Router) { }
   
-
-  ngOnInit() {
+ngOnInit() {
      this.getData();
   }
   getData() {

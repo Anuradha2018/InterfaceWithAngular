@@ -14,7 +14,12 @@
                 <div class="card-body" style="font-size: 12px">
                   <p class="card-text"><strong>Job ID:</strong> {{job.ID}}</p>
                   <p class="card-text"><strong>Job URI:</strong> {{job.URI}}</p>
+                  <p class="card-text"><strong>Job dir:</strong> {{job.dir}}</p>
+                  <p class="card-text"><strong>Num Retrieved:</strong> {{job.numRetried}}</p>
+                  <p class="card-text"><strong>Project Name:</strong> {{job.projectName}}</p>
                   <p class="card-text"><strong>Job State:</strong> {{job.state}}</p>
+                  <p class="card-text"><strong>State Reason:</strong> {{job.stateReason}}</p>
+                  <p class="card-text"><strong>Submitter Name:</strong> {{job.submitterName}}</p>
                   <p class="card-text"><strong>Sumbitted At:</strong> {{job.timestamps.submitted | date}}</p>
                   <p class="card-text"><strong>Started At:</strong> {{job.timestamps.started | date}}</p>
                   <p class="card-text"><strong>Ended At:</strong> {{job.timestamps.ended | date}}</p>

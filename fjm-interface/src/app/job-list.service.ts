@@ -1,8 +1,7 @@
-import { map, switchMap } from 'rxjs/operators';
 import { JobRecord } from './models/jobRecord';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of  } from 'rxjs';
+
 
 
 @Injectable({
@@ -14,9 +13,7 @@ export class JobListService {
   jobDetailURL: string = "http://localhost:5000/v0/jobs"
 
   constructor(private httpClient: HttpClient) { }
-
   
-
   getjobs() {
     return this.httpClient.get(`${this.jobURL}`);
   }

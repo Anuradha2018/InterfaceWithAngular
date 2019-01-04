@@ -13,7 +13,6 @@ export class JobDetailComponent implements OnInit {
   private id: string;
   job: JobRecord;
   jobs: JobRecord[];
-  // name: string;
 
 
   constructor( 
@@ -29,12 +28,5 @@ export class JobDetailComponent implements OnInit {
     });
     //console.log(this.job);
   }
- /*onClick(){
-  this.jobListService.getjobdetails()
-    .subscribe((data:any) =>{
-      this.jobs = data;
-      console.log(data);
-    })
- }*/
 
 }
