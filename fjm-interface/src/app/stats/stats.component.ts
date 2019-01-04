@@ -10,7 +10,7 @@ import { Stats } from './../models/stats';
   styleUrls: ['./stats.component.css']
 })
 export class StatsComponent implements OnInit {
-  stats: Stats[]=[];
+  stats: Stats;
 
   constructor(private statsService: StatsService) { }
 
@@ -18,9 +18,10 @@ export class StatsComponent implements OnInit {
     this.getStats();
   }
   getStats() {
+    
     this.statsService.getStats().subscribe((data:any) =>{
       this.stats = data;
-      console.log(data);
+      console.log(data);// to test data flow
     })
   }
 

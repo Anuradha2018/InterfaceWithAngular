@@ -7,12 +7,13 @@
   <title>API Statistics</title>
 </head>
 <body>
-  <div class="jumbotron" style="width:80%; margin: auto">
-    <table *ngIf="stats" class="table table-hover">
+  <div class="jumbotron" style="width:80%; margin: auto; margin-top: 40px">
+    <h2 align="center">Retrieves simple statistics about the API.</h2>
+    <table *ngIf="stats" class="table table-hover" style="margin-top:30px">
       <tbody>
         <tr class="table-primary">
           <th scope="row">Failed:</th>
-          <td>{{stats.count.failed}}</td>
+          <td >{{stats.count.failed}}</td>
         </tr>
         <tr class="table-primary">
           <th scope="row">Running:</th>
@@ -23,12 +24,12 @@
           <td>{{stats.count.submitted}}</td>
         </tr>
         <tr class="table-primary">
-          <th scope="row">Terminated:</th>
-          <td>{{stats.count.terminated}}</td>
+          <th scope="row">Successful:</th>
+          <td>{{stats.count.successful}}</td>
         </tr>
         <tr class="table-primary">
-          <th scope="row">Unknown:</th>
-          <td>{{stats.count.failed}}</td>
+          <th scope="row">Terminated:</th>
+          <td>{{stats.count.terminated}}</td>
         </tr>
         <tr class="table-primary">
           <th scope="row">Failed:</th>

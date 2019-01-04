@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  about: About[] = [];
+  about: About;
  
   constructor(private aboutService: AboutService) { }
 
@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
  getAbout() {
    this.aboutService.getDetails().subscribe((data:any) =>{
      this.about = data;
-     console.log(data);
+     // console.log(data); to test data flow
    })
  }
 }

@@ -7,7 +7,7 @@
   <title>List Of Jobs</title>
 </head>
 <body>
-    <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto">
+    <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto;margin-top: 40px">
       <div class="container">
           <button *ngFor="let job of jobs"  (click)="onSelect(job)"  type="button" class="btn btn-primary" routerLink="/jobdetail/:id">{{job.name}}</button>
       </div>
