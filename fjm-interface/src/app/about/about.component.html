@@ -13,7 +13,7 @@
         <hr class="my-4">
         <p>The base url for the first version of the api is http://localhost:5000/about, next you have the endpoints: About,
            Jobs, Job/JobID, and Stats. Each endpoint has a collection of methods to get more information about each collection. All requests should be made with HTTP GET requests</p>
-           <table class="table table-hover">
+           <table *ngIf="about" class="table table-hover">
               <tbody>
                 <tr class="table-primary">
                   <th scope="row">Name</th>

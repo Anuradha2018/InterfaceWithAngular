@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./job-detail.component.css']
 })
 export class JobDetailComponent implements OnInit {
-  private id: string;
+  // private id: string;
   job: JobRecord;
   jobs: JobRecord[];
 
@@ -21,12 +21,12 @@ export class JobDetailComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    // console.log(id); for testing
     this.jobListService.getjobdetails(id).subscribe(a =>{
       console.log(a);
        this.job = a
     });
-    //console.log(this.job);
+    //console.log(this.job); for testing
   }
 
 }

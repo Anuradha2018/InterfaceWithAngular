@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./job-list.component.css']
 })
 export class JobListComponent implements OnInit {
-  jobs: JobRecord ;
-  selectedId:number;
+  jobs: JobRecord;
 
   constructor(private jobListService: JobListService,
     private router: Router) { }
@@ -28,6 +27,4 @@ ngOnInit() {
   onSelect(job) {
     this.router.navigate(['/jobdetail',job.ID]);
   }
-  
-
 }

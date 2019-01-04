@@ -5,13 +5,15 @@ import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { StatsComponent } from './stats/stats.component';
 
 
 const routes: Routes = [
-  { path: 'jobdetail/:id', component: JobDetailComponent},
+  { path: 'jobdetail/:id', component: JobDetailComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'joblist', component: JobListComponent},
+  { path: 'joblist', component: JobListComponent },
   { path: 'filteredjob', component: FilterBySubmittedDateComponent},
+  { path: 'stats', component: StatsComponent },
   { path: '', redirectTo: '/about', pathMatch: 'full' }
 ];
 
