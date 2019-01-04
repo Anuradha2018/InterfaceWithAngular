@@ -12,6 +12,7 @@ import { NavigatorComponent } from './navigator/navigator.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SortBySubmittedDatePipe } from './sort-by-submitted-date.pipe';
 import { FilterBySubmittedDateComponent } from './filter-by-submitted-date/filter-by-submitted-date.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilterBySubmittedDateComponent } from './filter-by-submitted-date/filte
     JobListComponent,
     NavigatorComponent,
     SortBySubmittedDatePipe,
-    FilterBySubmittedDateComponent
+    FilterBySubmittedDateComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

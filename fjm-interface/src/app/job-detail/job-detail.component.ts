@@ -12,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class JobDetailComponent implements OnInit {
   private id: string;
   job: JobRecord;
-  jobs: JobRecord[] = [];
+  jobs: JobRecord[];
+  // name: string;
 
 
   constructor( 
@@ -20,12 +21,13 @@ export class JobDetailComponent implements OnInit {
     private jobListService: JobListService) { }
 
   ngOnInit() {
-    const id = (+this.route.snapshot.paramMap.get('id')).toString();
+    const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
-    this.job = this.jobListService.getJob(id);
-    
-    
-    console.log(this.job);
+    this.jobListService.getjobdetails(id).subscribe(a =>{
+      console.log(a);
+       this.job = a
+    });
+    //console.log(this.job);
   }
  /*onClick(){
   this.jobListService.getjobdetails()

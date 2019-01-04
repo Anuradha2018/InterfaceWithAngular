@@ -23,7 +23,7 @@ export class JobListComponent implements OnInit {
      this.getData();
   }
   getData() {
-    this.jobListService.getjobdetails()
+    this.jobListService.getjobs()
     .subscribe((data:{}) =>{
       this.jobs = data;
       console.log(data);

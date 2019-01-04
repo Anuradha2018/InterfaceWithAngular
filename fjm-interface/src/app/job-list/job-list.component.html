@@ -9,7 +9,7 @@
 <body>
     <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto">
       <div class="container">
-          <button *ngFor="let job of jobs"  (click)="onSelect(job)"  type="button" class="btn btn-primary" routerLink="/jobdetail/{{job.ID}}">{{job.name}}</button>
+          <button *ngFor="let job of jobs"  (click)="onSelect(job)"  type="button" class="btn btn-primary" routerLink="/jobdetail/:id">{{job.name}}</button>
       </div>
     </div>
 </body>
