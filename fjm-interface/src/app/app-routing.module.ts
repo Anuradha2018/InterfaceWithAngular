@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: 'jobdetail/:ID', component: JobDetailComponent},
+  { path: 'jobdetail/:id', component: JobDetailComponent},
   { path: 'about', component: AboutComponent },
   { path: 'joblist', component: JobListComponent},
   { path: 'filteredjob', component: FilterBySubmittedDateComponent},

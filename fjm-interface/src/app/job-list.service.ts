@@ -1,14 +1,14 @@
 import { JobRecord } from './models/jobRecord';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobListService {
-  jobs: JobRecord[]= [];
+  jobs: JobRecord[]=[];
   jobURL: string = "http://localhost:5000/v0/jobs?limit=50&offset=0";
   jobDetailURL: string = "http://localhost:5000/v0/jobs/"
 

@@ -1,5 +1,7 @@
+import { About } from './../models/about';
 import { AboutService } from './../about.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  about: Array<object> = [];
+  about: About[] = [];
  
   constructor(private aboutService: AboutService) { }
 
@@ -17,7 +19,7 @@ export class AboutComponent implements OnInit {
     this.getAbout();
  }
  getAbout() {
-   this.aboutService.getDetails().subscribe((data: Array<object>) =>{
+   this.aboutService.getDetails().subscribe((data:any) =>{
      this.about = data;
      console.log(data);
    })

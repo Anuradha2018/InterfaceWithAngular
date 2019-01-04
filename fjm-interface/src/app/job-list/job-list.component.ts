@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./job-list.component.css']
 })
 export class JobListComponent implements OnInit {
-  jobs: JobRecord;
+  jobs: JobRecord ;
   selectedId:number;
 
   constructor(private jobListService: JobListService,

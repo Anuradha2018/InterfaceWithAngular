@@ -20,10 +20,19 @@ export class JobDetailComponent implements OnInit {
     private jobListService: JobListService) { }
 
   ngOnInit() {
-
-    this.id = (+this.route.snapshot.paramMap.get['ID']).toString();
-    this.job = this.jobListService.getJob(this.id);
+    const id = (+this.route.snapshot.paramMap.get('id')).toString();
+    console.log(id);
+    this.job = this.jobListService.getJob(id);
+    
+    
+    console.log(this.job);
   }
- 
+ /*onClick(){
+  this.jobListService.getjobdetails()
+    .subscribe((data:any) =>{
+      this.jobs = data;
+      console.log(data);
+    })
+ }*/
 
 }
