@@ -19,7 +19,7 @@ ngOnInit() {
   }
   getData() {
     this.jobListService.getjobs()
-    .subscribe((data:{}) =>{
+    .subscribe((data) =>{
       this.jobs = data;
       console.log(data);
     })

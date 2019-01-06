@@ -26,7 +26,7 @@ export class JobDetailComponent implements OnInit {
       console.log(a);
        this.job = a
     });
-    //console.log(this.job); for testing
+    console.log(this.job);
   }
 
 }
