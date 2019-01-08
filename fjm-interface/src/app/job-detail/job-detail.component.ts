@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./job-detail.component.css']
 })
 export class JobDetailComponent implements OnInit {
-  // private id: string;
   job: JobRecord;
   jobs: JobRecord[];
 

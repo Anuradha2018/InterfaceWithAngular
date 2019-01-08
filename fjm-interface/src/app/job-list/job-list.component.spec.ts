@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { JobListComponent } from './job-list.component';
+
+
 
 describe('JobListComponent', () => {
   let component: JobListComponent;
@@ -18,7 +19,7 @@ describe('JobListComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });

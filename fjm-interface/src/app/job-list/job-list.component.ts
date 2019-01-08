@@ -15,15 +15,11 @@ export class JobListComponent implements OnInit {
     private router: Router) { }
   
 ngOnInit() {
-     this.getData();
-  }
-  getData() {
-    this.jobListService.getjobs()
-    .subscribe((data) =>{
+     this.jobListService.getjobs()
+    .subscribe((data:{}) =>{
       this.jobs = data;
-      console.log(data);
     })
-  }
+  } 
   onSelect(job) {
     this.router.navigate(['/jobdetail',job.ID]);
   }
