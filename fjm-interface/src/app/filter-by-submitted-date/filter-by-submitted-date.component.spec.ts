@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { AgGridModule } from 'ag-grid-angular';
 
 import { FilterBySubmittedDateComponent } from './filter-by-submitted-date.component';
+import { JobListService } from '../job-list.service';
 
 describe('FilterBySubmittedDateComponent', () => {
   let component: FilterBySubmittedDateComponent;
@@ -8,7 +11,9 @@ describe('FilterBySubmittedDateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterBySubmittedDateComponent ]
+      imports: [HttpClientTestingModule, AgGridModule.withComponents([])],
+      declarations: [ FilterBySubmittedDateComponent ],
+      providers: [ JobListService]
     })
     .compileComponents();
   }));
