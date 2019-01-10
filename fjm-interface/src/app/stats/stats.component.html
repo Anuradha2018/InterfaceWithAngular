@@ -1,42 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>API Statistics</title>
-</head>
-<body>
-  <div class="jumbotron" style="width:80%; margin: auto; margin-top: 40px">
-    <h2 align="center">Retrieves simple statistics about the API.</h2>
-    <table *ngIf="stats" class="table table-hover" style="margin-top:30px">
+<div class="jumbotron" style="width:80%; margin: auto; margin-top: 40px">
+  <h2 align="center">Retrieves simple statistics about the API.</h2>
+  <table *ngIf="stats" class="table table-hover" style="margin-top:30px">
       <tbody>
-        <tr class="table-primary">
-          <th scope="row">Failed:</th>
-          <td >{{stats.count.failed}}</td>
-        </tr>
-        <tr class="table-primary">
-          <th scope="row">Running:</th>
-          <td>{{stats.count.running}}</td>
-        </tr>
-        <tr class="table-primary">
-          <th scope="row">Submitted:</th>
-          <td>{{stats.count.submitted}}</td>
-        </tr>
-        <tr class="table-primary">
-          <th scope="row">Successful:</th>
-          <td>{{stats.count.successful}}</td>
-        </tr>
-        <tr class="table-primary">
-          <th scope="row">Terminated:</th>
-          <td>{{stats.count.terminated}}</td>
-        </tr>
-        <tr class="table-primary">
-          <th scope="row">Failed:</th>
-          <td>{{stats.count.unknown}}</td>
-        </tr>
+          <tr class="table-primary">
+              <th scope="row">Failed:</th>
+              <td>{{stats.count.failed}}</td>
+          </tr>
+          <tr class="table-primary">
+              <th scope="row">Running:</th>
+              <td>{{stats.count.running}}</td>
+          </tr>
+          <tr class="table-primary">
+              <th scope="row">Submitted:</th>
+              <td>{{stats.count.submitted}}</td>
+          </tr>
+          <tr class="table-primary">
+              <th scope="row">Successful:</th>
+              <td>{{stats.count.successful}}</td>
+          </tr>
+          <tr class="table-primary">
+              <th scope="row">Terminated:</th>
+              <td>{{stats.count.terminated}}</td>
+          </tr>
+          <tr class="table-primary">
+              <th scope="row">Failed:</th>
+              <td>{{stats.count.unknown}}</td>
+          </tr>
       </tbody>
-    </table>
-  </div>
-</body>
-</html>
+  </table>
+</div>

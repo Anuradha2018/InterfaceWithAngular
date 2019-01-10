@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Details of each Job</title>
-  </head>
-  <body>
-    <div class="jumbotron" style="width:70%; max-height:170rem; margin: auto;margin-top: 40px">
-      <div class="row" style="margin: auto">  
-        <div *ngIf ="job" class="card border-dark mb-3" style=" margin-right: auto;margin-top:30px;margin-left:auto">
-            <div class="card-header"><h6 class="card-title">NAME: {{job.name}}</h6></div>
-              <div class="card-body" style="font-size: 12px">
-                <p class="card-text"><strong>Job ID:</strong> {{job.ID}}</p>
-                <p class="card-text"><strong>Job URI:</strong> {{job.URI}}</p>
-                <p class="card-text"><strong>Job dir:</strong> {{job.dir}}</p>
-                <p class="card-text"><strong>Num Retrieved:</strong> {{job.numRetried}}</p>
-                <p class="card-text"><strong>Project Name:</strong> {{job.projectName}}</p>
-                <p class="card-text"><strong>Job State:</strong> {{job.state}}</p>
-                <p class="card-text"><strong>State Reason:</strong> {{job.stateReason}}</p>
-                <p class="card-text"><strong>Submitter Name:</strong> {{job.submitterName}}</p>
-                <p class="card-text"><strong>Sumbitted At:</strong> {{job.timestamps.submitted | date}}</p>
-                <p class="card-text"><strong>Started At:</strong> {{job.timestamps.started | date}}</p>
-                <p class="card-text"><strong>Ended At:</strong> {{job.timestamps.ended | date}}</p>
-                <p class="card-text"><strong>Last Modified At:</strong> {{job.timestamps.lastModified | date}}</p>
-              </div>
-            </div>
+<div class="jumbotron" style="width:70%; max-height:170rem; margin: auto;margin-top: 40px">
+  <div class="row" style="margin: auto">
+      <div *ngIf="job" class="card border-dark mb-3" style=" margin-right: auto;margin-top:30px;margin-left:auto">
+          <div class="card-header">
+              <h6 class="card-title">NAME: {{job.name}}</h6></div>
+          <div class="card-body" style="font-size: 12px">
+              <p class="card-text"><strong>Job ID:</strong> {{job.ID}}</p>
+              <p class="card-text"><strong>Job URI:</strong> {{job.URI}}</p>
+              <p class="card-text"><strong>Job dir:</strong> {{job.dir}}</p>
+              <p class="card-text"><strong>Num Retrieved:</strong> {{job.numRetried}}</p>
+              <p class="card-text"><strong>Project Name:</strong> {{job.projectName}}</p>
+              <p class="card-text"><strong>Job State:</strong> {{job.state}}</p>
+              <p class="card-text"><strong>State Reason:</strong> {{job.stateReason}}</p>
+              <p class="card-text"><strong>Submitter Name:</strong> {{job.submitterName}}</p>
+              <p class="card-text"><strong>Sumbitted At:</strong> {{job.timestamps.submitted | date}}</p>
+              <p class="card-text"><strong>Started At:</strong> {{job.timestamps.started | date}}</p>
+              <p class="card-text"><strong>Ended At:</strong> {{job.timestamps.ended | date}}</p>
+              <p class="card-text"><strong>Last Modified At:</strong> {{job.timestamps.lastModified | date}}</p>
           </div>
-          <button type="button" class="btn btn-primary btn-sm" style="float:right" routerLink="/joblist" >Back</button>
-        </div>
-      </body>
-  </html>
+      </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-sm" style="float:right" routerLink="/joblist">Back</button>
+</div>
