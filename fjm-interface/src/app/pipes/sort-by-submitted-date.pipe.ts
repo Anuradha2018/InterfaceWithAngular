@@ -1,6 +1,6 @@
-import { JobListService } from './job-list.service';
+import { JobListService } from '../services/job-list.service';
 import { Pipe, PipeTransform } from '@angular/core';
-import { JobRecord } from './models/jobRecord';
+import { JobRecord } from './../models/jobRecord';
 
 
 @Pipe({

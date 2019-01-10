@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobRecord } from './../models/jobRecord';
 import { HttpClient } from '@angular/common/http';
-import { JobListService } from './../job-list.service';
+import { JobListService } from './../services/job-list.service';
 
 @Component({
   selector: 'app-filter-by-submitted-date',

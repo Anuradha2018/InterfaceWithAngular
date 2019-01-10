@@ -1,4 +1,4 @@
-import { StatsService } from './../stats.service';
+import { StatsService } from './../services/stats.service';
 import { Component, OnInit } from '@angular/core';
 import { Stats } from './../models/stats';
 

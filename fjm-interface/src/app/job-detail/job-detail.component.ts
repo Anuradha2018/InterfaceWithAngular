@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { JobRecord } from './../models/jobRecord';
-import { JobListService } from './../job-list.service';
+import { JobListService } from './../services/job-list.service';
 import { ActivatedRoute } from '@angular/router';
 
 

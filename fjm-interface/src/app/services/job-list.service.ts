@@ -1,4 +1,4 @@
-import { JobRecord } from './models/jobRecord';
+import { JobRecord } from '../models/jobRecord';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
